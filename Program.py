@@ -29,19 +29,19 @@ for i in range(count):
     answer = table.cell(j,8).value
     print('************************************************')
     print(i + 1,'、',question,sep = '')
-    print(' A.',A,sep = '')
-    print(' B.',B,sep = '')
-    print(' C.',C,sep = '')
-    print(' D.',D,sep = '')
+    print(' 【A】-',A,sep = '')
+    print(' 【B】-',B,sep = '')
+    print(' 【C】-',C,sep = '')
+    print(' 【D】-',D,sep = '')
     if E != '':
-        print(' E.',E,sep = '')
+        print(' 【E】-',E,sep = '')
     your_answer = input('▲请输入你的答案：')
     if your_answer == answer:
         print('【答案正确】')
         count_right += 1
     elif your_answer != answer:
         print('【答案错误】')
-        print('正确答案为：',answer,sep = '')
+        print('正确答案为：【',answer,'】',sep = '')
         count_wrong += 1
 print('************************************************')
 print('********************答题结束********************')
@@ -55,4 +55,4 @@ print('正确率  ：',percentage,'%',sep = '')
 print('************************************************')
 while True:
     input()
-#Date last updated:11/1/2020
+#Date last updated:11/2/2020
