@@ -15,7 +15,7 @@ while True:
         count = eval(input('请输入你需要检测的题目数量：'))
         break
     except:
-        print('【错误】请输入数字')
+        print('【格式错误】请输入数字')
 count_right = 0
 count_wrong = 0
 for i in range(count):
@@ -29,13 +29,23 @@ for i in range(count):
     answer = table.cell(j,8).value
     print('************************************************')
     print(i + 1,'、',question,sep = '')
-    print(' 【A】-',A,sep = '')
-    print(' 【B】-',B,sep = '')
-    print(' 【C】-',C,sep = '')
-    print(' 【D】-',D,sep = '')
+    print(' 【A】',A,sep = '')
+    print(' 【B】',B,sep = '')
+    print(' 【C】',C,sep = '')
+    print(' 【D】',D,sep = '')
+    a = 0
     if E != '':
-        print(' 【E】-',E,sep = '')
-    your_answer = input('▲请输入你的答案：')
+        print(' 【E】',E,sep = '')
+        a = 1
+    while True:
+        your_answer = input('▲请输入你的答案：')
+        if a == 0:
+            if your_answer in ['A','B','C','D']:
+                break
+        else:
+            if your_answer in ['A','B','C','D','E']:
+                break
+        print('【格式错误】请输入大写选项')
     if your_answer == answer:
         print('【答案正确】')
         count_right += 1
@@ -55,4 +65,4 @@ print('正确率  ：',percentage,'%',sep = '')
 print('************************************************')
 while True:
     input()
-#Date last updated:11/2/2020
+#Date last updated:11/5/2020
