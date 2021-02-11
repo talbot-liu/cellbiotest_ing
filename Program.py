@@ -2,10 +2,6 @@
 import random
 import xlrd
 
-##随便搞了玩的
-def interval():
-    print('************************************************')
-
 ##说明
 print('************************************************')
 print('*******★☆★细胞生物学题库自测程序★☆★*******')
@@ -120,7 +116,7 @@ for i in count:
 ##结算界面
 print('********************答题结束********************')
 print('************************************************')
-accuracy = count_right / (number + 1)
+accuracy = count_right / number
 percentage = round(100 * accuracy,2)
 print('总题数  ：',number,sep = '')
 print('正确题数：',count_right,sep = '')
@@ -160,4 +156,3 @@ for i in sorted(code):
     file.write('\n\n')
 file.close()
 input('生成成功\n[按下回车结束程序]')
-
